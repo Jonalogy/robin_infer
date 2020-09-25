@@ -30,8 +30,6 @@ material_prediction = infer(
   image=image
 )
 
-# print(f'ROBin suggests {img_name} is made of {material_prediction}')
-
 shape_interpreter = tflite.Interpreter(model_path=str(robin_shape_weights))
 shape_interpreter.allocate_tensors()
 print("Inferring shape...")
