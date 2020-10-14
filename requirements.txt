@@ -1,0 +1,9 @@
+# Tensorflow Lite for Edge Devices
+https://dl.google.com/coral/python/tflite_runtime-2.1.0.post1-cp37-cp37m-linux_armv7l.whl
+
+# Packages with require versioning
+numpy==1.19.2
+Pillow==7.2.0
+
+# Packages where version doesn't matter
+picamera
