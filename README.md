@@ -1,15 +1,29 @@
 # ROBin Infer
 
-This code base contains only the trash inferencing part for ROBin. It is built for Raspberry Pi 4 (Raspbian Buster), and requires the following
+This code base contains only the inferencing part for ROBin. It was originally built on Raspberry Pi 4 (Raspbian Buster)
 
-**Debian packages:**
+**Requires Python Version:** 3.7.+
+
+**Requires Debian Packages:**
+
+For numpy:
 - libatlas-base-dev
+- libatlas3-base
 
-**Python Version**
-- 3.7.3
+For Pillow:
+- libjbig0
+- libopenjp2-7
+- libwebp6
+- libtiff5
+- liblcms2-2
+- libwebpdemux2
 
-## Install ROBin with `pip`
-Run `pip install -r requirements.txt`
+## Installation
+At the root of the project:
+1. Create a virtual environment with `python3 -m venv .venv`
+2. Activate the virtual environment with `source .venv/bin/activate`
+3. Install dependencies with `pip install -r requirements.txt`
+4. Install entry point script with `pip install -e .`
 
 ## To run ROBin
-At the root of the repo, run `python src/robin.py pwd`
+At the root of the repo, run the command `robin`
