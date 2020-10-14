@@ -26,4 +26,5 @@ At the root of the project:
 4. Install entry point script with `pip install -e .`
 
 ## To run ROBin
-At the root of the repo, run the command `robin`
+1. Activate the virtual environment with `source .venv/bin/activate`
+2. At the root of the repo, run the command `robin`
