@@ -1,4 +1,5 @@
 import sys
+import os
 from pathlib import Path
 from utils import check_path_exits
 from datetime import datetime
@@ -6,7 +7,12 @@ from vison import vision, load_and_resize_image
 import tflite_runtime.interpreter as tflite
 from inference import infer
 
-project_dir = Path(sys.argv[1])
+project_dir=None
+try:
+  project_dir=Path(sys.argv[1])
+except:
+  project_dir=Path(os.getcwd())
+
 robin_material_weights = project_dir/'models/ROBinV4.2_materials_model.tflite'
 robin_shape_weights = project_dir/'models/ROBinV4.2_shapes_model.tflite'
 image_size = (224, 224)
