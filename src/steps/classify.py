@@ -1,6 +1,7 @@
 import numpy as np
 
-def infer(interpreter, labels, image):
+
+def classify(interpreter, labels, image):
     # Get input and output tensors.
     input_details = interpreter.get_input_details()
     output_details = interpreter.get_output_details()
